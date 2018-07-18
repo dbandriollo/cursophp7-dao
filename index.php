@@ -22,8 +22,21 @@ echo json_encode($usuarios);*/
 //echo json_encode($search);
 
 //carrega um usuário usando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("dba", "ahdiwehd");
+//echo $usuario;
+
+
+//Inserindo um novo usuário
+//$aluno = new Usuario("dba", "321");
+//$aluno->insert();
+//echo $aluno;
+
 $usuario = new Usuario();
-$usuario->login("dba", "ahdiwehd");
+
+$usuario->loadById(3);
+
+$usuario->update("Bonesso", "@dba#");
 
 echo $usuario;
 ?>
